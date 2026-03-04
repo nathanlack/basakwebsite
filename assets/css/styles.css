@@ -1,0 +1,43 @@
+:root {
+  --bg: #e7e8ec;
+  --surface: #ffffff;
+  --text: #3f4b5a;
+  --brand: #f2cf00;
+  --brand-dark: #caad00;
+  --ink: #2f425b;
+  --border: #c9ced7;
+}
+* { box-sizing: border-box; }
+body { margin: 0; font-family: "Source Sans 3", sans-serif; color: var(--text); background: linear-gradient(180deg, #eff1f4 0%, var(--bg) 42%, #eceef2 100%); }
+.container { width: min(1120px, 92%); margin: 0 auto; }
+.row { display: flex; align-items: center; justify-content: space-between; min-height: 78px; gap: 1rem; }
+.topbar { background: rgba(231, 232, 236, 0.95); border-bottom: 1px solid var(--border); }
+.logo { width: 188px; height: auto; display: block; }
+.top-nav { display: flex; align-items: center; gap: 0.9rem; }
+.top-nav a:not(.btn) { color: var(--text); text-decoration: none; font-weight: 600; padding: 0.35rem 0.4rem; border-radius: 6px; }
+.top-nav a.active { color: #2f425b; background: rgba(102, 158, 217, 0.24); }
+.cta { background: var(--brand); color: var(--ink); padding: 0.55rem 0.9rem; border-radius: 8px; text-decoration: none; font-weight: 700; }
+.hero { padding: 3.3rem 0; background: linear-gradient(90deg, transparent 0 62%, rgba(242, 207, 0, 0.9) 62% 100%); }
+.hero-grid { display: grid; grid-template-columns: 1.5fr 1fr; gap: 1.2rem; align-items: center; }
+.eyebrow { text-transform: uppercase; letter-spacing: 0.08em; color: var(--ink); font-weight: 700; }
+h1,
+h2,
+h3 { font-family: "Merriweather", serif; line-height: 1.25; margin-top: 0; }
+
+h1 { font-size: clamp(2rem, 3.5vw, 3.1rem); margin: 0.2rem 0 1rem; color: var(--ink); }
+.panel { background: var(--surface); border: 1px solid var(--border); padding: 1.1rem; border-radius: 12px; }
+.actions { display: flex; gap: 0.7rem; margin-top: 1.1rem; }
+.btn { background: var(--brand); color: var(--ink); border: 1px solid var(--brand-dark); text-decoration: none; padding: 0.7rem 1rem; border-radius: 9px; font-weight: 700; }
+.btn.ghost { background: #fff; border-color: var(--border); }
+.btn-small { padding: 0.45rem 0.8rem; }
+.metrics { padding: 1.3rem 0 2.2rem; }
+.metric-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 0.8rem; }
+.metric-grid article { background: #fff; border: 1px solid var(--border); border-radius: 12px; padding: 0.9rem; }
+.metric-grid strong { font-size: 1.2rem; display: block; color: var(--ink); }
+@media (max-width: 900px) {
+  .hero { background: linear-gradient(180deg, transparent 0 68%, rgba(242, 207, 0, 0.9) 68% 100%); }
+  .hero-grid, .metric-grid { grid-template-columns: 1fr; }
+  .row { flex-wrap: wrap; gap: 0.65rem; }
+  .top-nav { width: 100%; flex-wrap: wrap; gap: 0.4rem; }
+  .logo { width: 146px; }
+}
