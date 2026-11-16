@@ -1,0 +1,43 @@
+/* Original EthiCA palette, logo and typography are retained. */
+:root { --ink: #2f425b; }
+html { scroll-behavior: smooth; }
+h1,h2,h3 { color: var(--ink); }
+.site-footer h3 { color: #fff; }
+body { overflow-wrap: break-word; }
+main a:not(.btn) { color: var(--ink); text-decoration: underline; text-underline-offset: 4px; }
+a:focus-visible,button:focus-visible,input:focus-visible,textarea:focus-visible { outline: 3px solid var(--ink); outline-offset: 4px; }
+.skip-link { position: fixed; top: -100px; left: 20px; z-index: 200; padding: 12px; background: white; color: var(--ink); }
+.skip-link:focus { top: 12px; }
+.hero { padding: 76px 0; }
+.hero-grid { align-items: center; grid-template-columns: 1.5fr 1fr; gap: 60px; }
+.hero h1 { font-size: clamp(2.3rem,4.6vw,3.8rem); letter-spacing: -.035em; max-width: 710px; }
+.intro { font-size: 1.22rem; max-width: 550px; }
+.hero-panel { padding: 32px; }
+.hero-panel h2 { font-size: 1.75rem; }
+.hero-panel li { padding: 6px 0; }
+.section { padding: 44px 0; }
+.page-hero { padding: 56px 0 20px; }
+.page-hero p { max-width: 760px; }
+.card { padding: 26px; }
+.card h3 { font-size: 1.25rem; }
+.card:hover { transform: none; }
+.service-number { font-size: .78rem; letter-spacing: .08em; font-weight: 700; margin-bottom: 24px; }
+.section-head { margin-bottom: 28px; }
+.callout { display: flex; align-items: center; justify-content: space-between; gap: 30px; padding: 32px; border-left: 6px solid var(--brand); background: white; border-radius: 10px; }
+.callout .btn { flex-shrink: 0; }
+.footer-grid { grid-template-columns: 1.1fr .7fr 1.3fr; gap: 30px; }
+.footer-grid a { overflow-wrap: anywhere; }
+.team-list { display: grid; gap: 28px; }
+.member-card { display: grid; grid-template-columns: 220px minmax(0,1fr); gap: 32px; padding: 30px; }
+.member-photo { width: 100%; height: auto; display: block; border-radius: 10px; }
+.member-bio { min-width: 0; }
+.member-bio h2 { margin-bottom: 16px; font-size: 1.55rem; }
+.member-bio p + p { margin-top: 16px; }
+.member-bio h3 { margin-top: 26px; font-size: 1.15rem; }
+.member-interests { padding-left: 22px; }
+.member-interests li + li { margin-top: 12px; }
+.credentials { font-weight: 600; margin-bottom: 22px; }
+@media(max-width:1000px) { .main-nav { gap: .3rem; } .main-nav a { font-size: .95rem; } }
+@media(max-width:900px) { .hero-grid,.footer-grid { grid-template-columns: 1fr; } .hero { padding: 44px 0; background: linear-gradient(180deg,transparent 0 64%,rgba(242,207,0,.9) 64% 100%); } .hero-grid { gap: 28px; } .callout { align-items: flex-start; flex-direction: column; } }
+@media(max-width:650px) { .member-card { grid-template-columns: 1fr; padding: 22px; gap: 24px; } .member-photo { max-width: 240px; } .card { padding: 22px; } .section { padding: 30px 0; } }
+@media(prefers-reduced-motion:reduce) { html { scroll-behavior:auto; } *,*::before,*::after { transition:none !important; } }
